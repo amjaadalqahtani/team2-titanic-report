@@ -6,11 +6,11 @@ import math
 titanic = pd.read_csv('data/train.csv')
 titanic
 
-#Descriptive statistics: 
+#descriptive statistics: 
 titanic.info()
 titanic.describe()
 
-# the number od survivals 
+#the number of survivals 
 survivals = titanic[titanic['Survived'] == 1]
 len(survivals)
 
@@ -40,4 +40,4 @@ sns.catplot(x ="Sex", hue ="Survived",kind ="count", data = titanic).set(title='
 """Based on the plot, we can conclude that more women (233) survived overall compared to men (109)."""
 sns.catplot(x ="Pclass", hue ="Survived",kind ="count", data = titanic).set(title='Surivival by Class, n=342')
 """Based on the plot, we can conclude that Class 1 had the highest survival rate (136), Class 2 had the 
-lowest survival rate (87), and Class 3 had the most deaths."""
+lowest survival rate (87), and Class 3 had the most deaths (372)."""
